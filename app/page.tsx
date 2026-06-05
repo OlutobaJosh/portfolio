@@ -277,14 +277,10 @@ function useReveal() {
       entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } }),
       { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
     );
-    document.querySelectorAll('.reveal').forEach((el, i) => {
-      const g = el.closest('[data-group]');
-      if (g) { const items = Array.from(g.querySelectorAll('.reveal')); el.style.transitionDelay = `${items.indexOf(el) * 0.1}s`; }
-      obs.observe(el);
-    });
-    return () => obs.disconnect();
-  }, []);
-}
+    document.querySelectorAll<HTMLElement>('.reveal').forEach((el, i) => {
+  const g = el.closest('[data-group]');
+  if (g) { const items = Array.from(g.querySelectorAll<HTMLElement>('.reveal')
+); el.style.transitionDelay = `${items.indexOf(el) * 0.1}s`; }
 
 // ─── NAVBAR ──────────────────────────────────────────────────────────────────
 function Navbar() {
