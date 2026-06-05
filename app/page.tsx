@@ -278,9 +278,17 @@ function useReveal() {
       { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
     );
     document.querySelectorAll<HTMLElement>('.reveal').forEach((el, i) => {
-  const g = el.closest('[data-group]');
-  if (g) { const items = Array.from(g.querySelectorAll<HTMLElement>('.reveal')
-); el.style.transitionDelay = `${items.indexOf(el) * 0.1}s`; }
+      const g = el.closest('[data-group]');
+      if (g) {
+        const items = Array.from(g.querySelectorAll<HTMLElement>('.reveal'));
+        el.style.transitionDelay = `${items.indexOf(el) * 0.1}s`;
+      }
+      obs.observe(el);  // ← was missing: actually attach the observer
+    });             // ← closes forEach
+
+    return () => obs.disconnect(); // ← cleanup
+  }, []);           // ← closes useEffect
+}
 
 // ─── NAVBAR ──────────────────────────────────────────────────────────────────
 function Navbar() {
