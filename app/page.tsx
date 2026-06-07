@@ -423,9 +423,9 @@ function HeroSection() {
           <div style={{ display: 'flex', gap: '12px', marginBottom: '28px', flexWrap: 'wrap' }}>
             {[
     { label: 'Upwork',      Icon: SiUpwork,   color: '#6FDA44', href: 'https://www.upwork.com/freelancers/joshuaasiribo' },
-    { label: 'GitHub',      Icon: SiGithub,   color: '#181717', href: 'https://github.com/OlutobaJosh' },
+    { label: 'GitHub',      Icon: SiGithub,   color: '#e2e8f0', href: 'https://github.com/OlutobaJosh' },
     { label: 'LinkedIn',    Icon: FaLinkedin, color: '#0A66C2', href: 'https://linkedin.com/in/joshuaasiribo' },
-    { label: 'X (Twitter)', Icon: SiX,        color: '#000000', href: 'https://twitter.com/OlutobaJosh' },
+    { label: 'X (Twitter)', Icon: SiX,        color: '#e2e8f0', href: 'https://twitter.com/OlutobaJosh' },
   // ✅ FIXED
   ].map(s => (
     <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
