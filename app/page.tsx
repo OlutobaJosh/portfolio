@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
-import { SiUpwork, SiGithub, SiLinkedin, SiX } from 'react-icons/si';
+import { SiUpwork, SiGithub, SiX } from 'react-icons/si'; // <-- It is completely removed from here
 import { FaLinkedin } from 'react-icons/fa';
 // ─── CSS ────────────────────────────────────────────────────────────────────
 const CSS = `
