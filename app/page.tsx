@@ -1,5 +1,6 @@
 'use client';
-import { SiUpwork, SiGithub, SiLinkedin, SiX } from 'react-icons/si';
+import { useState, useEffect, useRef } from 'react';
+import { SiX } from 'react-icons/si';
 // ─── CSS ────────────────────────────────────────────────────────────────────
 const CSS = `
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
@@ -420,17 +421,21 @@ function HeroSection() {
           {/* Social icons */}
           <div style={{ display: 'flex', gap: '12px', marginBottom: '28px', flexWrap: 'wrap' }}>
             {[
-    { label: 'Upwork',      Icon: SiUpwork,   color: '#6FDA44', href: 'https://www.upwork.c...' },
-    { label: 'GitHub',      Icon: SiGithub,   color: '#181717', href: 'https://github.com/O...' },
-    { label: 'LinkedIn',    Icon: SiLinkedin, color: '#0A66C2', href: 'https://linkedin.c...' },
-    { label: 'X (Twitter)', Icon: SiX,        color: '#000000', href: 'https://twitter....' },
+    { label: 'Upwork',      Icon: SiUpwork,   color: '#6FDA44', href: 'https://www.upwork.com/freelancers/joshuaasiribo' },
+    { label: 'GitHub',      Icon: SiGithub,   color: '#181717', href: 'https://github.com/OlutobaJosh' },
+    { label: 'LinkedIn',    Icon: SiLinkedin, color: '#0A66C2', href: 'https://linkedin.com/in/joshuaasiribo' },
+    { label: 'X (Twitter)', Icon: SiX,        color: '#000000', href: 'https://twitter.com/OlutobaJosh' },
+  // ✅ FIXED
   ].map(s => (
-              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+    <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
       style={{ color: s.color, display: 'flex' }}>
       <s.Icon size={22} />
     </a>
-          {/* Buttons */}
-          <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+  ))}
+</div>
+
+{/* Buttons */}
+<div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
             <a href="https://www.upwork.com/freelancers/joshuaasiribo" target="_blank" rel="noopener noreferrer" className="btn-hire">Hire Me</a>
             <a href="#contact" className="btn-contact">Contact Me</a>
           </div>
