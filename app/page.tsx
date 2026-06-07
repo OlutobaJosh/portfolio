@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import { SiX } from 'react-icons/si';
+import { SiUpwork, SiGithub, SiLinkedin, SiX } from 'react-icons/si';
 // ─── CSS ────────────────────────────────────────────────────────────────────
 const CSS = `
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
