@@ -1,6 +1,5 @@
 'use client';
-import { useState, useEffect, useRef } from "react";
-
+import { SiUpwork, SiGithub, SiLinkedin, SiX } from 'react-icons/si';
 // ─── CSS ────────────────────────────────────────────────────────────────────
 const CSS = `
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
@@ -421,17 +420,15 @@ function HeroSection() {
           {/* Social icons */}
           <div style={{ display: 'flex', gap: '12px', marginBottom: '28px', flexWrap: 'wrap' }}>
             {[
-              { label: 'Upwork', icon: '💼', href: 'https://www.upwork.com/freelancers/joshuaasiribo' },
-              { label: 'GH', icon: '🐙', href: 'https://github.com' },
-              { label: 'LI', icon: '🔗', href: 'https://linkedin.com' },
-              { label: 'TW', icon: '𝕏', href: '#' },
-            ].map(s => (
-              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="social-icon" title={s.label}>
-                <span style={{ fontSize: '0.9rem' }}>{s.icon}</span>
-              </a>
-            ))}
-          </div>
-
+    { label: 'Upwork',      Icon: SiUpwork,   color: '#6FDA44', href: 'https://www.upwork.c...' },
+    { label: 'GitHub',      Icon: SiGithub,   color: '#181717', href: 'https://github.com/O...' },
+    { label: 'LinkedIn',    Icon: SiLinkedin, color: '#0A66C2', href: 'https://linkedin.c...' },
+    { label: 'X (Twitter)', Icon: SiX,        color: '#000000', href: 'https://twitter....' },
+  ].map(s => (
+              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+      style={{ color: s.color, display: 'flex' }}>
+      <s.Icon size={22} />
+    </a>
           {/* Buttons */}
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
             <a href="https://www.upwork.com/freelancers/joshuaasiribo" target="_blank" rel="noopener noreferrer" className="btn-hire">Hire Me</a>
@@ -852,7 +849,7 @@ function Footer() {
           <span style={{ color: 'var(--white)' }}>Port</span><span style={{ color: 'var(--cyan)' }}>folio</span>
           <span style={{ color: 'var(--muted)', fontWeight: 400, fontSize: '0.85rem', marginLeft: '8px' }}>Joshua Asiribo</span>
         </p>
-        <p style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>© {new Date().getFullYear()} · Made with ❤️ in Nigeria 🇳🇬</p>
+        <p style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>© {new Date().getFullYear()} Joshua Asiribo. All rights reserved.</p>
       </div>
     </footer>
   );
