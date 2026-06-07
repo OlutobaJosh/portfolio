@@ -817,7 +817,7 @@ function ContactSection() {
           </p>
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center', marginBottom: '40px' }}>
-            <a href="https://www.upwork.com/freelancers/joshuaasiribo" target="_blank" rel="noopener noreferrer" className="btn-contact" style={{ fontSize: '0.95rem', padding: '14px 36px' }}>🚀 Hire Me on Upwork</a>
+            <a href="https://www.upwork.com/freelancers/joshuaasiribo" target="_blank" rel="noopener noreferrer" className="btn-contact" style={{ fontSize: '0.95rem', padding: '14px 36px' }}>🚀 Hire Me </a>
             <a href="mailto:asiribojoshua@gmail.com?subject=Project%20Inquiry%20-%20Portfolio&body=Hi%20Joshua%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project.%0A%0A" className="btn-hire" style={{ fontSize: '0.95rem', padding: '14px 36px' }}>✉️ Send Email</a>
           </div>
 
