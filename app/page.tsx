@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import { SiUpwork, SiGithub, SiLinkedin, SiX } from 'react-icons/si';
-
+import { FaLinkedin } from 'react-icons/fa';
 // ─── CSS ────────────────────────────────────────────────────────────────────
 const CSS = `
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
@@ -424,7 +424,7 @@ function HeroSection() {
             {[
     { label: 'Upwork',      Icon: SiUpwork,   color: '#6FDA44', href: 'https://www.upwork.com/freelancers/joshuaasiribo' },
     { label: 'GitHub',      Icon: SiGithub,   color: '#181717', href: 'https://github.com/OlutobaJosh' },
-    { label: 'LinkedIn',    Icon: SiLinkedin, color: '#0A66C2', href: 'https://linkedin.com/in/joshuaasiribo' },
+    { label: 'LinkedIn',    Icon: FaLinkedin, color: '#0A66C2', href: 'https://linkedin.com/in/joshuaasiribo' },
     { label: 'X (Twitter)', Icon: SiX,        color: '#000000', href: 'https://twitter.com/OlutobaJosh' },
   // ✅ FIXED
   ].map(s => (
